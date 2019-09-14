@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios'
 
-export default function LocationsList() {
+export default function LocationsList({api}) {
      // TODO: Add useState to track data from useEffect
      const [locations, setLocations] = useState([])
      useEffect(() => {

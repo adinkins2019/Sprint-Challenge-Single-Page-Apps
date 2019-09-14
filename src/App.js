@@ -13,7 +13,7 @@ export default function App() {
       {/* <TabNav /> */}
       <CharacterList api={api} />
       <EpisodeList api={api} />
-      <LocationList api={api} />
+      <LocationsList api={api} />
     </main>
   );
 }
