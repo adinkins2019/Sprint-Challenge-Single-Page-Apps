@@ -1,0 +1,23 @@
+import React, { useEffect, useState } from "react";
+import EpisodeCard from './EpisodeCard'
+import axios from 'axios';
+
+export default function EpisodeList({api}) {
+  // TODO: Add useState to track data from useEffect
+    const [episodes, setEpisodes] = useState([])
+  useEffect(() => {
+    // TODO: Add API Request here - must run in `useEffect`
+    axios
+    .get(`${api}/episode`)
+    .then(response => console.log(response.data))
+    .catch(err => console.log("Error: ", err))
+    //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
+  }, [episodes]);
+
+  return (
+    <section className="episode-list grid-view">
+      <h2>TODO: `array.map()` over your state here!</h2>
+      {episodes.map(episode => console.log(episode)) }
+    </section>
+  );
+}
