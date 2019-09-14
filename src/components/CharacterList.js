@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
+import CharacterCard from './CharacterCard'
 
 export default function CharacterList({api}) {
   // TODO: Add useState to track data from useEffect
@@ -9,14 +10,25 @@ const [characters, setCharacters] = useState([])
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
       axios
       .get(`${api}/character`)
-      .then(response => console.log(response.data.results))
+      .then(response => setCharacters(response.data.results))
       .catch(err => console.log('Error: ', err))
   }, [characters]);
 
   return (
     <section className="character-list grid-view">
-      <h2>TODO: `array.map()` over your state here!</h2>
-      {characters.map(character => console.log(character))}
+      
+      {characters.map(character => 
+        <CharacterCard created={character.created}
+                       episode={character.episode}
+                       gender={character.gender}
+                       name={character.name}
+                       species={character.species}
+                       type={character.type}
+                       origin={character.origin}
+                       status={character.status}
+                       location={character.location}
+                       url={character.url} />
+      )}
     </section>
   );
 }
