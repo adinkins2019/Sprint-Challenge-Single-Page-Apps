@@ -9,7 +9,7 @@ export default function EpisodeList({api}) {
     // TODO: Add API Request here - must run in `useEffect`
     axios
     .get(`${api}/episode`)
-    .then(response => console.log(response.data.results))
+    .then(response => setEpisodes(response.data.results))
     .catch(err => console.log("Error: ", err))
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
   }, [episodes]);
