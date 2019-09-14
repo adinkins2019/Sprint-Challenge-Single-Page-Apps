@@ -10,7 +10,6 @@ export default function LocationsList({api}) {
        axios
        .get(`${api}/location`)
        .then(response => {
-           console.log(response.data.results)
            setLocations(response.data.results)
        })
        .catch(err => console.log("Error: ", err))

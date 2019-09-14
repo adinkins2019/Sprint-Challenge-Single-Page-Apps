@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function LocationCard({ name, type, dimension, residents }) {
-  console.log(residents)
+  
   return (
     <div>
       <h2>Location Name: {name}</h2>
