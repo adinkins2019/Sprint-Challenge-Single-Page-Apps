@@ -8,8 +8,8 @@ const [characters, setCharacters] = useState([])
     // TODO: Add API Request here - must run in `useEffect`
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
       axios
-      .get(`${api}/characters`)
-      .then(response => console.log(response.data))
+      .get(`${api}/character`)
+      .then(response => console.log(response.data.results))
       .catch(err => console.log('Error: ', err))
   }, [characters]);
 

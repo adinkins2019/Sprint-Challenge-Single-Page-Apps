@@ -8,7 +8,7 @@ export default function LocationsList({api}) {
        // TODO: Add API Request here - must run in `useEffect`
        axios
        .get(`${api}/location`)
-       .then(response => console.log(response.data))
+       .then(response => console.log(response.data.results))
        .catch(err => console.log("Error: ", err))
        //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
      }, [locations]);
