@@ -1,14 +1,18 @@
 import React from "react";
+import {Card} from 'semantic-ui-react'
 
 export default function LocationCard({ name, type, dimension, residents }) {
   
   return (
-    <div>
-      <h2>Location Name: {name}</h2>
-      <h3>Location Type: {type}</h3>
-      <h3>Dimension: {dimension}</h3>
-      <p>{residents.map(resident => <div>{resident}</div>)}</p>
+    <Card>
+      <Card.Header>Location Name: {name}</Card.Header>
+        <Card.Description>
+        <p><strong>Location Type: </strong> {type}<br/>
+            <strong>Dimension: </strong>{dimension}<br/>
+      {residents.map(resident => <div>{resident}</div>)}</p>
+        </Card.Description>
+      
 
-    </div>
+    </Card>
   )
 }

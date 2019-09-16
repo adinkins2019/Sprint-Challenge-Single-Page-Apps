@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import EpisodeCard from './EpisodeCard'
 import axios from 'axios';
 
-export default function EpisodeList({api}) {
+export default function EpisodeList() {
   // TODO: Add useState to track data from useEffect
+  const api = "https://rickandmortyapi.com/api/"
     const [episodes, setEpisodes] = useState([])
   useEffect(() => {
     // TODO: Add API Request here - must run in `useEffect`

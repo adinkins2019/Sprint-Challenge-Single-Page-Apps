@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import axios from 'axios'
 import LocationCard from './LocationCard'
 
-export default function LocationsList({api}) {
+export default function LocationsList() {
      // TODO: Add useState to track data from useEffect
+     const api = "https://rickandmortyapi.com/api/"
      const [locations, setLocations] = useState([])
      useEffect(() => {
        // TODO: Add API Request here - must run in `useEffect`
