@@ -8,7 +8,7 @@ import CharacterList from './components/CharacterList'
 import WelcomePage from './components/WelcomePage'
 import styled from 'styled-components'
 
-const aNavLink = styled.NavLink`
+const aNavLink = styled(NavLink)`
   text-decoration: none;
 `
 
