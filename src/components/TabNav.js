@@ -3,9 +3,7 @@ import { Tab, Menu, Icon } from "semantic-ui-react";
 import { NavLink } from "react-router-dom";
 
 // TODO: Add missing menu/tabs/nav below
-const panes = [
 
-]
 // Review Semantic UI Component options for nav-like UI:
 // https://react.semantic-ui.com/collections/menu/
 // https://react.semantic-ui.com/modules/tab/

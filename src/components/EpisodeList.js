@@ -17,7 +17,7 @@ export default function EpisodeList() {
 
   return (
     <section className="episode-list grid-view">
-      <h2>TODO: `array.map()` over your state here!</h2>
+      {/*<h2>TODO: `array.map()` over your state here!</h2>*/}
       {episodes.map(episode =>
           <EpisodeCard created={episode.created}
                          episode={episode.episode}
@@ -25,7 +25,7 @@ export default function EpisodeList() {
                          air_date={episode.air_date}
                          characters={episode.characters}
                          url={episode.url}/>
-       }
+      )}
     </section>
   );
 }
