@@ -4,7 +4,7 @@ import CharacterCard from './CharacterCard'
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
-  const api = "https://rickandmortyapi.com/api/"
+  const api = "https://rickandmortyapi.com/api"
 const [characters, setCharacters] = useState([])
   useEffect(() => {
     // TODO: Add API Request here - must run in `useEffect`
@@ -17,8 +17,8 @@ const [characters, setCharacters] = useState([])
 
   return (
     <section className="character-list grid-view">
-      
-      {characters.map(character => 
+
+      {characters.map(character =>
         <CharacterCard created={character.created}
                        episode={character.episode}
                        gender={character.gender}
