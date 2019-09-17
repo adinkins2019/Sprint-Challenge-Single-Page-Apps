@@ -8,11 +8,11 @@ import CharacterList from './components/CharacterList'
 import WelcomePage from './components/WelcomePage'
 import styled from 'styled-components'
 
-import aNavLink = styled.NavLink`
+const aNavLink = styled.NavLink`
   text-decoration: none;
 `
 
-import Li = styled.li`
+const Li = styled.li`
   padding: 20%;
   border: 1px solid black;
   `
