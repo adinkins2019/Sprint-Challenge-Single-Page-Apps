@@ -8,16 +8,14 @@ import CharacterList from './components/CharacterList'
 import WelcomePage from './components/WelcomePage'
 import styled from 'styled-components'
 
-const aNavLink = styled(NavLink)`
-  text-decoration: none;
-   
-`
-
 const Li = styled.li`
-  padding: 5%;
+  padding: 2%;
   border: 1px solid black;
+  list-style: none;
   `
-
+const Ul = styled.ul`
+  display: flex;
+  `
 export default function App() {
 
   return (
@@ -25,12 +23,12 @@ export default function App() {
       <Header />
       {/* <TabNav /> */}
 
-      <ul>
-     <aNavLink to="/"><Li>Home</Li></aNavLink>
-     <aNavLink to="/character"><Li>Characters</Li></aNavLink>
-     <aNavLink to="/episode"><Li>Episodes</Li></aNavLink>
-     <aNavLink to="/location"><Li>Locations</Li></aNavLink>
-     </ul>
+      <Ul>
+     <NavLink to="/"><Li>Home</Li></aNavLink>
+     <NavLink to="/character"><Li>Characters</Li></NavLink>
+     <NavLink to="/episode"><Li>Episodes</Li></NavLink>
+     <NavLink to="/location"><Li>Locations</Li></NavLink>
+     </Ul>
       <Route exact path="/" component={WelcomePage} />
       <Route path="/character" component={CharacterList} />
       <Route path="/location" component={LocationsList} />
