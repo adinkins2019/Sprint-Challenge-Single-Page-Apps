@@ -10,10 +10,11 @@ import styled from 'styled-components'
 
 const aNavLink = styled(NavLink)`
   text-decoration: none;
+   
 `
 
 const Li = styled.li`
-  padding: 20%;
+  padding: 5%;
   border: 1px solid black;
   `
 
