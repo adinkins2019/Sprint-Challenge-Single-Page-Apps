@@ -8,9 +8,7 @@ import React from "react";
           <Card.Description>Created:{created}<br/>
             Date Aired: {air_date}<br/>
           Episode: {episode}<br/>
-        Characters: {characters.map(character => {
-          getCharacter(character)
-        })}
+        Characters: {characters.map(character => getCharacter(character))}
              Url: {url}
           </Card.Description>
         </Card.Content>
