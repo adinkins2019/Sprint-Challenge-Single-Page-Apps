@@ -13,8 +13,8 @@ export default function App() {
     <main>
       <Header />
       {/* <TabNav /> */}
-      <CharacterList />
-      <EpisodeList />
+
+      
      <NavLink to="/">Home</NavLink>
      <NavLink to="/character">Characters</NavLink>
      <NavLink to="/episode">Episodes</NavLink>
