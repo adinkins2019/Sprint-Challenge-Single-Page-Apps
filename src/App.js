@@ -9,12 +9,16 @@ import WelcomePage from './components/WelcomePage'
 import styled from 'styled-components'
 
 const Li = styled.li`
-  padding: 2%;
+  padding: 10%;
   border: 1px solid black;
   list-style: none;
+  margin: 0 10px;
+  width: 100%;
+
   `
 const Ul = styled.ul`
   display: flex;
+  justify-content: space-evenly;
   `
 export default function App() {
 
@@ -24,7 +28,7 @@ export default function App() {
       {/* <TabNav /> */}
 
       <Ul>
-     <NavLink to="/"><Li>Home</Li></aNavLink>
+     <NavLink to="/"><Li>Home</Li></NavLink>
      <NavLink to="/character"><Li>Characters</Li></NavLink>
      <NavLink to="/episode"><Li>Episodes</Li></NavLink>
      <NavLink to="/location"><Li>Locations</Li></NavLink>
