@@ -19,5 +19,5 @@ import React from "react";
   }
 
   function getCharacter(props) {
-    return ( {props.character} <br/> )
+    return ( `${props.character}\n`  )
   }
