@@ -1,6 +1,6 @@
 import React from "react";
-import { Tab, Menu, Icon } from "semantic-ui-react";
-import { NavLink } from "react-router-dom";
+import { Tab } from "semantic-ui-react";
+
 
 // TODO: Add missing menu/tabs/nav below
 
@@ -10,6 +10,8 @@ import { NavLink } from "react-router-dom";
 // https://react.semantic-ui.com/elements/button/
 // https://react.semantic-ui.com/collections/breadcrumb/
 
-export default function TabNav() {
-
+export default function TabNav({panes}) {
+    return(
+    <Tab panes={panes} renderActiveOnly={false} />
+    )
 };
