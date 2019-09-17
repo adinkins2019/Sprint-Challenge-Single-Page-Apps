@@ -6,6 +6,16 @@ import LocationsList from './components/LocationsList'
 import EpisodeList from './components/EpisodeList'
 import CharacterList from './components/CharacterList'
 import WelcomePage from './components/WelcomePage'
+import styled from 'styled-components'
+
+import aNavLink = styled.NavLink`
+  text-decoration: none;
+`
+
+import Li = styled.li`
+  padding: 20%;
+  border: 1px solid black;
+  `
 
 export default function App() {
 
@@ -14,12 +24,12 @@ export default function App() {
       <Header />
       {/* <TabNav /> */}
 
-      
-     <NavLink to="/">Home</NavLink>
-     <NavLink to="/character">Characters</NavLink>
-     <NavLink to="/episode">Episodes</NavLink>
-     <NavLink to="/location">Locations</NavLink>
-
+      <ul>
+     <aNavLink to="/"><Li>Home</Li></aNavLink>
+     <aNavLink to="/character"><Li>Characters</Li></aNavLink>
+     <aNavLink to="/episode"><Li>Episodes</Li></aNavLink>
+     <aNavLink to="/location"><Li>Locations</Li></aNavLink>
+     </ul>
       <Route exact path="/" component={WelcomePage} />
       <Route path="/character" component={CharacterList} />
       <Route path="/location" component={LocationsList} />
